@@ -7,12 +7,15 @@ var doorCenter = $("#Door-Center1");
 var doorRight = $("#Door-Right1");
 var exit = $("#Exit");
 var msg = $("#count");
+var restartButton = $("#RestartButton");
 
 exit.hide();
 KeyOne.hide();
 KeyTwo.hide();
+restartButton.hide();
 
 console.log(keyCount);
+
 var randomKey = Math.random() < 0.5 ? KeyOne : KeyTwo;
 randomKey.hide();
 
@@ -60,18 +63,22 @@ doorRight.on("click", function () {
   GetRoomCount();
 });
 
+restartButton.on("click", function () {
+  location.reload();
+});
+
 function checkKeyCount() {
   if (keyCount >= 10) {
     exit.show();
     console.log("Exit shown");
     doorCenter.on("click", function () {
       $("#GameBoard").hide();
-      doorRight.hide();
-      doorLeft.hide();
-
-      msg
-        .text("you have Escaped The back Room??? ")
-        .css({ "font-size": "50px", color: "green", padding: "150px 0 0 0;" });
+      msg.text("you have Escaped The back Room??? ").css({
+        "font-size": "50px",
+        padding: "150px 0 0 0",
+        "-webkit-text-stroke": "1px black",
+      });
+      restartButton.show();
     });
   }
 }

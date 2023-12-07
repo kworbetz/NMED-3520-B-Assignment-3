@@ -5,12 +5,12 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    font-family: 'Mynerve', cursive;
+        font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
     padding: 30px;
-    background-color: rgb(150, 110, 19);
+     background-color: rgb(150, 110, 19); 
 }
 
 h1{
@@ -36,3 +36,31 @@ h1{
 #Door-Right{
     cursor: pointer;
 }
+
+#Keys-0, #Keys-1{
+    cursor: pointer;
+}
+
+#RestartButton{
+    font-family: 'Mynerve', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    background-color: #444;
+    text-align: center;
+    color: #EFE0DF;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: solid 2px #4a4a4a;
+    box-shadow: inset 1px 1px 5px #444, 1px 1px 3px #444, 2px 2px 1px #111, -1px -1px 3px #444, 2px 2px 4px #111;
+ 
+}
+
+#container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
